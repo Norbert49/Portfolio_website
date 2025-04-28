@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Norbert Onyango - Data Science Portfolio</title>
+
+        <!-- Tailwind CSS -->
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Box Icons -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        <style>
+            :root {
+                --first-color: #3E0E82;
+                --second-color: #6C63FF;
+                --white-color: #F9F9F9;
+            }
+            
+            body {
+                font-family: 'Poppins', sans-serif;
+                color: #333;
+            }
+            
+            .section {
+                padding: 4rem 0 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                color: var(--first-color);
+                margin-bottom: 2rem;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            
+            .bd-grid {
+                display: grid;
+                gap: 1.5rem;
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0 1.5rem;
+            }
+            
+            .button {
+                display: inline-block;
+                background-color: var(--second-color);
+                color: #FFF;
+                padding: 1rem 2rem;
+                border-radius: 4px;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+            
+            .button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(108, 99, 255, 0.2);
+            }
+            
+            /* Header */
+            .l-header {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 100;
+                background-color: #FFF;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav {
+                height: 4rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .nav__logo {
+                font-weight: 700;
+                font-size: 1.2rem;
+                color: var(--first-color);
+            }
+            
+            .nav__list {
+                display: flex;
+            }
+            
+            .nav__item {
+                margin-left: 2.5rem;
+            }
+            
+            .nav__link {
+                color: #333;
+                font-weight: 500;
+                transition: 0.3s;
+            }
+            
+            .nav__link:hover {
+                color: var(--second-color);
+            }
+            
+            .active-link {
+                color: var(--second-color);
+                position: relative;
+            }
+            
+            .active-link::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: var(--second-color);
+                bottom: -5px;
+                left: 0;
+            }
+            
+            .nav__toggle {
+                font-size: 1.5rem;
+                cursor: pointer;
+                display: none;
+            }
+            
+            /* Home */
+            .home {
+                height: calc(100vh - 4rem);
+                margin-top: 4rem;
+                background: linear-gradient(135deg, #F9F9F9 0%, #E6E6FF 100%);
+            }
+            
+            .home__container {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+            
+            .home__data {
+                z-index: 10;
+            }
+            
+            .home__title {
+                font-size: 3rem;
+                line-height: 1.2;
+                margin-bottom: 1.5rem;
+            }
+            
+            .home__title-color {
+                color: var(--second-color);
+            }
+            
+            .home__social {
+                display: flex;
+                margin-top: 2rem;
+            }
+            
+            .home__social-icon {
+                font-size: 1.5rem;
+                color: var(--first-color);
+                margin-right: 1.5rem;
+                transition: 0.3s;
+            }
+            
+            .home__social-icon:hover {
+                color: var(--second-color);
+                transform: translateY(-3px);
+            }
+            
+            .home__img {
+                position: relative;
+                width: 400px;
+                height: 400px;
+                justify-self: center;
+            }
+            
+            .home__blob {
+                fill: var(--second-color);
+            }
+            
+            .home__blob-img {
+                width: 300px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            }
+            
+            /* About */
+            .about__container {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+            
+            .about__img {
+                width: 350px;
+                border-radius: 8px;
+                justify-self: center;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+            
+            .about__subtitle {
+                font-size: 1.5rem;
+                color: var(--first-color);
+                margin-bottom: 1rem;
+            }
+            
+            .about__text {
+                margin-bottom: 1.5rem;
+                line-height: 1.7;
+                color: #666;
+            }
+            
+            /* Skills */
+            .skills__container {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+            
+            .skills__subtitle {
+                font-size: 1.5rem;
+                color: var(--first-color);
+                margin-bottom: 1rem;
+            }
+            
+            .skills__text {
+                margin-bottom: 2rem;
+                line-height: 1.7;
+                color: #666;
+            }
+            
+            .skills__data {
+                margin-bottom: 1.5rem;
+            }
+            
+            .skills__names {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.5rem;
+            }
+            
+            .skills__icon {
+                font-size: 1.5rem;
+                color: var(--second-color);
+                margin-right: 0.5rem;
+            }
+            
+            .skills__name {
+                font-weight: 600;
+            }
+            
+            .skills__bar {
+                height: 5px;
+                border-radius: 5px;
+                background-color: #EEE;
+            }
+            
+            .skills__html {
+                width: 95%;
+                background-color: var(--second-color);
+            }
+            
+            .skills__css {
+                width: 85%;
+                background-color: var(--second-color);
+            }
+            
+            .skills__js {
+                width: 65%;
+                background-color: var(--second-color);
+            }
+            
+            .skills__ux {
+                width: 85%;
+                background-color: var(--second-color);
+            }
+            
+            .skills__percentage {
+                font-size: 0.8rem;
+                color: #666;
+                text-align: right;
+            }
+            
+            .skills__img {
+                width: 350px;
+                border-radius: 8px;
+                justify-self: center;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+            
+            /* Work */
+            .work__container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+            
+            .work__img {
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: 0.3s;
+            }
+            
+            .work__img:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            }
+            
+            .work__img img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            
+            /* Contact */
+            .contact__input {
+                width: 100%;
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+                border: 1px solid #DDD;
+                border-radius: 4px;
+                font-family: 'Poppins', sans-serif;
+                outline: none;
+                transition: 0.3s;
+            }
+            
+            .contact__input:focus {
+                border-color: var(--second-color);
+            }
+            
+            .contact__button {
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+            
+            /* Footer */
+            .footer {
+                background-color: var(--first-color);
+                color: #FFF;
+                text-align: center;
+                padding: 2rem 0;
+            }
+            
+            .footer__title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .footer__social {
+                margin-bottom: 1rem;
+            }
+            
+            .footer__icon {
+                font-size: 1.5rem;
+                color: #FFF;
+                margin: 0 1rem;
+                transition: 0.3s;
+            }
+            
+            .footer__icon:hover {
+                color: var(--second-color);
+            }
+            
+            .footer__copy {
+                font-size: 0.8rem;
+                opacity: 0.7;
+            }
+            
+            /* Responsive */
+            @media screen and (max-width: 768px) {
+                .nav__menu {
+                    position: fixed;
+                    top: 4rem;
+                    right: -100%;
+                    width: 80%;
+                    height: 100vh;
+                    background-color: #FFF;
+                    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+                    transition: 0.5s;
+                    padding: 3rem 0;
+                }
+                
+                .nav__list {
+                    flex-direction: column;
+                }
+                
+                .nav__item {
+                    margin: 1.5rem 0;
+                    margin-left: 3rem;
+                }
+                
+                .nav__toggle {
+                    display: block;
+                }
+                
+                .show {
+                    right: 0;
+                }
+                
+                .home__container {
+                    grid-template-columns: 1fr;
+                    text-align: center;
+                }
+                
+                .home__social {
+                    justify-content: center;
+                }
+                
+                .home__img {
+                    order: -1;
+                    width: 300px;
+                    height: 300px;
+                }
+                
+                .about__container,
+                .skills__container {
+                    grid-template-columns: 1fr;
+                }
+                
+                .about__img,
+                .skills__img {
+                    order: -1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Norbert</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                        <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Norbert Onyango</span><br> Data Science & Research Enthusiast</h1>
+
+                    <a href="#contact" class="button">Contact Me</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://twitter.com/norbert490" class="home__social-icon"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.linkedin.com/in/norbert-oduor-b76195110/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/yourusername" class="home__social-icon"><i class='bx bxl-github'></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="{{ url_for('static', filename='images/profile-img.jpg') }}"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="{{ url_for('static', filename='images/profile-img.jpg') }}" alt="Norbert Onyango">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'm Norbert Onyango</h2>
+                        <p class="about__text">
+                            I'm a passionate data science professional with expertise in research, data analysis, and machine learning. 
+                            With a strong academic background and practical experience, I help organizations make data-driven decisions.
+                        </p>
+                        
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">Name:</span>
+                                <span class="about__info-text">Norbert Onyango</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">Email:</span>
+                                <span class="about__info-text">your.email@example.com</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">From:</span>
+                                <span class="about__info-text">Nairobi, Kenya</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">Availability:</span>
+                                <span class="about__info-text">Open to opportunities</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="button" style="margin-top: 1.5rem;">Download CV</a>
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Professional Skills</h2>
+                        <p class="skills__text">My expertise spans across technical data science skills, research methodologies, and essential soft skills for effective collaboration.</p>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-python skills__icon'></i>
+                                <span class="skills__name">Python</span>
+                            </div>
+                            <div class="skills__bar skills__html"></div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-brain skills__icon'></i>
+                                <span class="skills__name">Machine Learning</span>
+                            </div>
+                            <div class="skills__bar skills__css"></div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-line-chart skills__icon'></i>
+                                <span class="skills__name">Data Analysis</span>
+                            </div>
+                            <div class="skills__bar skills__js"></div>
+                            <div>
+                                <span class="skills__percentage">88%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-search-alt skills__icon'></i>
+                                <span class="skills__name">Research</span>
+                            </div>
+                            <div class="skills__bar skills__ux"></div>
+                            <div>
+                                <span class="skills__percentage">92%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="{{ url_for('static', filename='images/skills-img.jpg') }}" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== EDUCATION =====-->
+            <section class="about section" id="education">
+                <h2 class="section-title">Education</h2>
+
+                <div class="about__container bd-grid">
+                    <div>
+                        <div class="education__item">
+                            <h3 class="about__subtitle">Master's Degree</h3>
+                            <p class="education__date">University Name - 2020</p>
+                            <p class="about__text">Specialization in Data Science or related field</p>
+                        </div>
+                        
+                        <div class="education__item">
+                            <h3 class="about__subtitle">Bachelor's Degree</h3>
+                            <p class="education__date">University Name - 2016</p>
+                            <p class="about__text">Major in Computer Science or related field</p>
+                        </div>
+                        
+                        <div class="education__item">
+                            <h3 class="about__subtitle">Certifications</h3>
+                            <p class="education__date">Various Institutions</p>
+                            <p class="about__text">Data Science, Machine Learning, Research Methodologies</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about__img">
+                        <img src="{{ url_for('static', filename='images/education-img.jpg') }}" alt="Education">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== EXPERIENCE =====-->
+            <section class="skills section" id="experience">
+                <h2 class="section-title">Experience</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <div class="experience__item">
+                            <h3 class="skills__subtitle">Data Scientist</h3>
+                            <p class="experience__date">Company Name (2021 - Present)</p>
+                            <ul class="experience__list">
+                                <li>Developed machine learning models for predictive analysis</li>
+                                <li>Led data-driven research projects</li>
+                                <li>Created data visualization dashboards</li>
+                                <li>Collaborated with cross-functional teams</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="experience__item">
+                            <h3 class="skills__subtitle">Research Analyst</h3>
+                            <p class="experience__date">Organization Name (2018 - 2021)</p>
+                            <ul class="experience__list">
+                                <li>Conducted quantitative and qualitative research</li>
+                                <li>Published research papers in peer-reviewed journals</li>
+                                <li>Presented findings at international conferences</li>
+                                <li>Managed research teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="{{ url_for('static', filename='images/experience-img.jpg') }}" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== PORTFOLIO =====-->
+            <section class="work section" id="portfolio">
+                <h2 class="section-title">Portfolio</h2>
+
+                <div class="work__container bd-grid">
+                    <a href="#" class="work__img">
+                        <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Machine Learning Project">
+                        <div class="work__overlay">
+                            <h3>Machine Learning Project</h3>
+                            <p>Predictive model for customer behavior analysis</p>
+                        </div>
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Research Publication">
+                        <div class="work__overlay">
+                            <h3>Research Publication</h3>
+                            <p>Analysis of emerging technologies in Africa</p>
+                        </div>
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="Data Visualization">
+                        <div class="work__overlay">
+                            <h3>Data Visualization</h3>
+                            <p>Interactive dashboard for business intelligence</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" placeholder="Your Message" class="contact__input"></textarea>
+                        <input type="button" value="Send Message" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Norbert Onyango</p>
+            <div class="footer__social">
+                <a href="https://twitter.com/norbert490" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.linkedin.com/in/norbert-oduor-b76195110/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/yourusername" class="footer__icon"><i class='bx bxl-github'></i></a>
+            </div>
+            <p class="footer__copy">&#169; 2023 Norbert Onyango. All rights reserved</p>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script>
+            /*===== MENU SHOW =====*/ 
+            const showMenu = (toggleId, navId) => {
+                const toggle = document.getElementById(toggleId),
+                    nav = document.getElementById(navId)
+                
+                if(toggle && nav) {
+                    toggle.addEventListener('click', () => {
+                        nav.classList.toggle('show')
+                    })
+                }
+            }
+            showMenu('nav-toggle', 'nav-menu')
+            
+            /*===== ACTIVE AND REMOVE MENU =====*/
+            const navLink = document.querySelectorAll('.nav__link')
+            
+            function linkAction() {
+                // Active link
+                navLink.forEach(n => n.classList.remove('active-link'))
+                this.classList.add('active-link')
+                
+                // Remove menu mobile
+                const navMenu = document.getElementById('nav-menu')
+                navMenu.classList.remove('show')
+            }
+            navLink.forEach(n => n.addEventListener('click', linkAction))
+            
+            /*===== SCROLL REVEAL ANIMATION =====*/
+            const sr = ScrollReveal({
+                origin: 'top',
+                distance: '80px',
+                duration: 2000,
+                reset: true
+            })
+            
+            /*SCROLL HOME*/
+            sr.reveal('.home__title', {})
+            sr.reveal('.home__social-icon', {delay: 200, interval: 200})
+            sr.reveal('.home__img', {delay: 400})
+            
+            /*SCROLL ABOUT*/
+            sr.reveal('.about__img', {})
+            sr.reveal('.about__subtitle', {delay: 200})
+            sr.reveal('.about__text', {delay: 400})
+            
+            /*SCROLL SKILLS*/
+            sr.reveal('.skills__subtitle', {})
+            sr.reveal('.skills__text', {delay: 200})
+            sr.reveal('.skills__data', {delay: 400, interval: 200})
+            sr.reveal('.skills__img', {delay: 600})
+            
+            /*SCROLL WORK*/
+            sr.reveal('.work__img', {interval: 200})
+            
+            /*SCROLL CONTACT*/
+            sr.reveal('.contact__input', {delay: 200, interval: 200})
+        </script>
+    </body>
+</html>

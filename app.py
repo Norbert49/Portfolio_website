@@ -1,25 +1,30 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
-def contact_form():
-    if request.method == 'POST':
-        # Get form data
-        name = request.form['name']
-        email = request.form['email']
-        phone = request.form['phone']
-        message = request.form['message']
+@app.route('/')
+def home():
+    return render_template('index.html')
 
-        # Validate form data (you can add more validation as needed)
+@app.route('/about')
+def about():
+    return render_template('sections/about.html')
 
-        # Handle the form data (you can replace this with your preferred method)
-        # For simplicity, we'll just print the data to the console
-        print(f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}")
+@app.route('/skills')
+def skills():
+    return render_template('sections/skills.html')
 
-        # You can add additional logic here, such as sending an email or saving to a database
+@app.route('/education')
+def education():
+    return render_template('sections/education.html')
 
-    return render_template('index.html')  # Assuming your HTML file is named 'index.html'
+@app.route('/experience')
+def experience():
+    return render_template('sections/experience.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('sections/contact.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
