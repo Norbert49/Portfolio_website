@@ -4,7 +4,8 @@
     { "source": "/skills.html", "destination": "/skills", "permanent": true },
     { "source": "/education.html", "destination": "/education", "permanent": true },
     { "source": "/portfolio.html", "destination": "/portfolio", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact", "permanent": true }
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/", "destination": "/index", "permanent": true }  
   ],
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
@@ -12,6 +13,6 @@
     { "source": "/education", "destination": "/education.html" },
     { "source": "/portfolio", "destination": "/portfolio.html" },
     { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/", "destination": "/index.html" }
+    { "source": "/index", "destination": "/index.html" }  
   ]
 }
