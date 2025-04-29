@@ -25,14 +25,6 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: false
-});
-
 /*===== SCROLL TO TOP BUTTON =====*/
 const scrollTop = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => {
@@ -57,9 +49,16 @@ links.forEach(link => {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         }
-        // For external links (e.g., about.html, skills.html), allow default navigation
+        // For external links (e.g., about.html), allow default navigation
     });
 });
+
+/*===== AOS Animation Init =====*/
+AOS.init({
+    duration: 1000,
+    once: true,
+});
+
 
 /*SCROLL HOME*/
 sr.reveal('.home__title', {});

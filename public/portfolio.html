@@ -7,6 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
 </head>
 <body class="font-[Poppins] bg-gray-50">
     <!-- Header -->
@@ -40,7 +43,7 @@
                     <div class="work__item bg-white p-6 rounded-lg shadow-md">
                         <img src="images/spare_parts_pricing.gif" alt="Spare Parts Pricing Model" class="work__img mb-4">
                         <h3 class="text-2xl font-bold mb-2">Spare Parts Pricing Intelligence</h3>
-                        <p class="text-gray-600 mb-4">Developed a machine learning model to estimate car spare part prices using regression techniques. Integrated BI dashboards for insight generation.</p>
+                        <p class="text-gray-600 mb-4">Developed a machine learning model to estimate car spare part prices using Hierarchichal Bayesian techniques. Deployed using FASTAPI for realtime inferencing.</p>
                         <a href="https://kenyan-vehicle-parts-pricing-model.onrender.com/docs#/" target="_blank" class="button bg-[#47babac2] text-white px-6 py-3 rounded-md hover:bg-[#C0C0C0]">View Project</a>
                     </div>
 
@@ -56,21 +59,47 @@
                     <div class="work__item bg-white p-6 rounded-lg shadow-md">
                         <img src="images/customer.png" alt="Customer Sales Analysis" class="work__img mb-4">
                         <h3 class="text-2xl font-bold mb-2">Customer Sales Analysis Dashboard</h3>
-                        <p class="text-gray-600 mb-4">Built a predictive model to forecast customer churn using classification algorithms, Power BI dashboards for strategic decision-making.</p>
+                        <p class="text-gray-600 mb-4">
+                            Designed an interactive Power BI dashboard to track sales patterns across multiple regions, customer segments, and time periods. 
+                            Integrated predictive analytics to forecast customer churn and provided actionable insights for strategic decision-making.
+                        </p>
                         <a href="https://public.tableau.com/app/profile/norbert.john/viz/customersalesanaysis/Dashboard1" target="_blank" class="button bg-[#47babac2] text-white px-6 py-3 rounded-md hover:bg-[#C0C0C0]">View Project</a>
                     </div>
 
-                    <!-- Project 4 -->
+                                        <!-- Project 4 -->
                     <div class="work__item bg-white p-6 rounded-lg shadow-md">
                         <img src="images/HRM.png" alt="HRM Management" class="work__img mb-4">
                         <h3 class="text-2xl font-bold mb-2">HRM Analytics Dashboard</h3>
-                        <p class="text-gray-600 mb-4">Created a BI dashboard to visualize income, expenses, and loans for low-income communities and marginalized groups.</p>
+                        <p class="text-gray-600 mb-4">
+                            Designed an interactive BI dashboard to track employee attrition, productivity, and workforce trends. 
+                            Provided actionable insights to optimize HR strategies, improve resource allocation, and enhance organizational performance.
+                        </p>
                         <a href="https://public.tableau.com/app/profile/norbert.john/viz/HRMAnalyticsDashboard/HRAnalyticsDashboard" target="_blank" class="button bg-[#47babac2] text-white px-6 py-3 rounded-md hover:bg-[#C0C0C0]">View Project</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-100 py-4 text-center text-sm text-gray-600">
+        <p class="footer__title font-bold mb-2">Norbert Onyango</p>
+        
+        <!-- Social Links -->
+        <div class="footer__social flex justify-center space-x-4 mb-2">
+            <a href="https://twitter.com/norbert490" class="footer__icon text-blue-500 hover:text-blue-700"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.linkedin.com/in/norbert-oduor-b76195110/" class="footer__icon text-blue-700 hover:text-blue-900"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Norbert49" class="footer__icon text-gray-800 hover:text-black"><i class='bx bxl-github'></i></a>
+        </div>
+        
+        <!-- Contact Details -->
+        <div class="footer__contact">
+            <p><strong>Location:</strong> Nairobi, Kenya</p>
+            <p><strong>Email:</strong> <a href="mailto:jn.data490@gmail.com" class="text-blue-500 hover:underline">jn.data490@gmail.com</a></p>
+        </div>
+        
+        <p class="footer__copy mt-2">&#169; 2025 All rights reserved</p>
+    </footer>
 
     <!-- JavaScript -->
     <script src="https://unpkg.com/scrollreveal"></script>

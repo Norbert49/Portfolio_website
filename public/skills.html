@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Skills - Norbert Onyango</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body class="font-[Poppins] bg-gray-50">
+
     <!-- Header -->
     <header class="l-header fixed w-full top-0 bg-white shadow-sm z-50">
         <nav class="nav container mx-auto px-4 h-16 flex justify-between items-center">
@@ -31,66 +44,107 @@
 
     <!-- Main Content -->
     <main class="l-main pt-16">
-        <!--===== SKILLS =====-->
+        <!-- Skills Section -->
         <section class="skills section py-20" id="skills">
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-bold mb-6 text-center">Skills</h2>
                 <div class="skills__container grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-                    <!-- Skill Card 1 -->
-                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+
+                    <!-- Skill Cards -->
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up">
                         <i class='bx bxl-python skills__icon text-4xl mb-4'></i>
                         <h3 class="text-2xl font-bold mb-2">Python Web Frameworks</h3>
                         <p class="text-gray-600">FastAPI, Django, Flask</p>
                     </div>
 
-                    <!-- Skill Card 2 -->
-                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up">
                         <i class='bx bx-brain skills__icon text-4xl mb-4'></i>
                         <h3 class="text-2xl font-bold mb-2">Data Science & Machine Learning</h3>
                         <p class="text-gray-600">YOLO, TensorFlow, PyTorch, Model Deployment</p>
                     </div>
 
-                    <!-- Skill Card 3 -->
-                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up">
                         <i class='bx bx-cloud skills__icon text-4xl mb-4'></i>
                         <h3 class="text-2xl font-bold mb-2">Cloud Computing</h3>
                         <p class="text-gray-600">AWS, Azure, Data Pipeline Development</p>
                     </div>
 
-                    <!-- Skill Card 4 -->
-                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up">
                         <i class='bx bx-bar-chart-alt skills__icon text-4xl mb-4'></i>
                         <h3 class="text-2xl font-bold mb-2">Visualization & Dashboarding</h3>
                         <p class="text-gray-600">Tableau, Power BI, Excel, Dash</p>
                     </div>
 
-                    <!-- Skill Card 5 -->
-                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up">
                         <i class='bx bx-data skills__icon text-4xl mb-4'></i>
                         <h3 class="text-2xl font-bold mb-2">Data Collection & Management</h3>
                         <p class="text-gray-600">REDCap, Kobo, ODK</p>
                     </div>
 
-                    <!-- Skill Card 6 -->
-                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up">
                         <i class='bx bx-server skills__icon text-4xl mb-4'></i>
                         <h3 class="text-2xl font-bold mb-2">Big Data Technologies</h3>
                         <p class="text-gray-600">Hadoop, Spark</p>
                     </div>
 
-                    <!-- Skill Card 7 -->
-                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up">
                         <i class='bx bx-task skills__icon text-4xl mb-4'></i>
                         <h3 class="text-2xl font-bold mb-2">Project & Workflow Management</h3>
                         <p class="text-gray-600">Dashboard Development, Version Control, Workflow Optimization</p>
                     </div>
+
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="js/main.js"></script>
+    <!-- Footer -->
+    <footer class="footer bg-gray-100 py-4 text-center text-sm text-gray-600">
+        <p class="footer__title font-bold mb-2">Norbert Onyango</p>
+        
+        <div class="footer__social flex justify-center space-x-4 mb-2">
+            <a href="https://twitter.com/norbert490" class="footer__icon text-blue-500 hover:text-blue-700"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.linkedin.com/in/norbert-oduor-b76195110/" class="footer__icon text-blue-700 hover:text-blue-900"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Norbert49" class="footer__icon text-gray-800 hover:text-black"><i class='bx bxl-github'></i></a>
+        </div>
+        
+        <div class="footer__contact">
+            <p><strong>Location:</strong> Nairobi, Kenya</p>
+            <p><strong>Email:</strong> <a href="mailto:jn.data490@gmail.com" class="text-blue-500 hover:underline">jn.data490@gmail.com</a></p>
+        </div>
+        
+        <p class="footer__copy mt-2">&#169; 2025. All rights reserved</p>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // Show Menu
+        const showMenu = (toggleId, navId) => {
+            const toggle = document.getElementById(toggleId),
+                  nav = document.getElementById(navId);
+
+            if (toggle && nav) {
+                toggle.addEventListener('click', () => {
+                    nav.classList.toggle('show');
+                });
+            }
+        };
+        showMenu('nav-toggle', 'nav-menu');
+
+        // Active Link and Hide Mobile Menu
+        const navLink = document.querySelectorAll('.nav__link');
+        function linkAction() {
+            navLink.forEach(n => n.classList.remove('active-link'));
+            this.classList.add('active-link');
+            document.getElementById('nav-menu').classList.remove('show');
+        }
+        navLink.forEach(n => n.addEventListener('click', linkAction));
+    </script>
 </body>
 </html>
