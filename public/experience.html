@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Norbert Onyango</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Header -->
+    <header class="l-header fixed w-full top-0 bg-white shadow-sm z-50">
+        <nav class="nav container mx-auto px-4 h-16 flex justify-between items-center">
+            <a href="index.html" class="nav__logo text-2xl font-bold text-[#47babac2]">Norbert</a>
+            <div class="nav__menu hidden md:flex" id="nav-menu">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="nav__link hover:text-[#C0C0C0]">Home</a></li>
+                    <li><a href="about.html" class="nav__link hover:text-[#C0C0C0]">About</a></li>
+                    <li><a href="skills.html" class="nav__link hover:text-[#C0C0C0]">Skills</a></li>
+                    <li><a href="education.html" class="nav__link hover:text-[#C0C0C0]">Education</a></li>
+                    <li><a href="portfolio.html" class="nav__link hover:text-[#C0C0C0]">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav__link hover:text-[#C0C0C0]">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle md:hidden" id="nav-toggle">
+                <i class='bx bx-menu text-2xl'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="l-main pt-16">
+        <!--===== EXPERIENCE =====-->
+        <section class="experience-section section py-20" id="experience">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-6 text-center">Experience</h2>
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold mb-2">Lead Data Scientist 
+                                <span class="date text-gray-500">| Innovex Solutions (Jul 2024 – Apr 2025)</span>
+                            </h3>
+                            <ul class="list-disc pl-5 text-gray-600">
+                                <li>Spearheaded AI for motor claims automation.</li>
+                                <li>Deployed CV models for minor vehicle damage detection.</li>
+                                <li>Built pricing models using claims + repair datasets.</li>
+                                <li>Managed CVAT and pipelines on AWS, Azure, and GCP.</li>
+                                <li>Served models in real-time using FastAPI APIs.</li>
+                                <li>Led cross-functional MLOps adoption with GitHub.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold mb-2">Senior Analyst (Monitoring & Evaluation) 
+                                <span class="date text-gray-500">| L-IFT BV (2021 – 2024)</span>
+                            </h3>
+                            <ul class="list-disc pl-5 text-gray-600">
+                                <li>Led M&E initiatives focused on marginalized communities.</li>
+                                <li>Built Power BI & Tableau dashboards for social metrics.</li>
+                                <li>Digitized reporting workflows with FastAPI & cloud tools.</li>
+                                <li>Used Python/R to analyze financial patterns in communities.</li>
+                                <li>Mentored teams in ethical and reproducible data practices.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold mb-2">Junior Analyst 
+                                <span class="date text-gray-500">| L-IFT BV (2019 – 2021)</span>
+                            </h3>
+                            <ul class="list-disc pl-5 text-gray-600">
+                                <li>Processed financial diaries from refugees and rural areas.</li>
+                                <li>Built models to forecast household financial shocks.</li>
+                                <li>Engineered data pipelines with Flask, FastAPI & AWS.</li>
+                                <li>Visualized resilience data using Tableau & Power BI.</li>
+                                <li>Helped develop FINBIT microfinance platform.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-content bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold mb-2">Data Analyst Intern 
+                                <span class="date text-gray-500">| CIC Insurance Group (May – Sep 2018)</span>
+                            </h3>
+                            <ul class="list-disc pl-5 text-gray-600">
+                                <li>Analyzed claims data for anomalies and patterns.</li>
+                                <li>Contributed to early-stage fraud detection models.</li>
+                                <li>Structured large datasets for reporting integrity.</li>
+                                <li>Collaborated with actuarial and IT teams to improve efficiency.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Norbert Onyango</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Header -->
+    <header class="l-header fixed w-full top-0 bg-white shadow-sm z-50">
+        <nav class="nav container mx-auto px-4 h-16 flex justify-between items-center">
+            <a href="index.html" class="nav__logo text-2xl font-bold text-[#47babac2]">Norbert</a>
+            <div class="nav__menu hidden md:flex" id="nav-menu">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="nav__link hover:text-[#C0C0C0]">Home</a></li>
+                    <li><a href="about.html" class="nav__link hover:text-[#C0C0C0]">About</a></li>
+                    <li><a href="skills.html" class="nav__link hover:text-[#C0C0C0]">Skills</a></li>
+                    <li><a href="education.html" class="nav__link hover:text-[#C0C0C0]">Education</a></li>
+                    <li><a href="portfolio.html" class="nav__link hover:text-[#C0C0C0]">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav__link hover:text-[#C0C0C0]">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle md:hidden" id="nav-toggle">
+                <i class='bx bx-menu text-2xl'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="l-main pt-16">
+        <!--===== SKILLS =====-->
+        <section class="skills section py-20" id="skills">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-6 text-center">Skills</h2>
+                <div class="skills__container grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Skill Card 1 -->
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class='bx bxl-python skills__icon text-4xl mb-4'></i>
+                        <h3 class="text-2xl font-bold mb-2">Python Web Frameworks</h3>
+                        <p class="text-gray-600">FastAPI, Django, Flask</p>
+                    </div>
+
+                    <!-- Skill Card 2 -->
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class='bx bx-brain skills__icon text-4xl mb-4'></i>
+                        <h3 class="text-2xl font-bold mb-2">Data Science & Machine Learning</h3>
+                        <p class="text-gray-600">YOLO, TensorFlow, PyTorch, Model Deployment</p>
+                    </div>
+
+                    <!-- Skill Card 3 -->
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class='bx bx-cloud skills__icon text-4xl mb-4'></i>
+                        <h3 class="text-2xl font-bold mb-2">Cloud Computing</h3>
+                        <p class="text-gray-600">AWS, Azure, Data Pipeline Development</p>
+                    </div>
+
+                    <!-- Skill Card 4 -->
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class='bx bx-bar-chart-alt skills__icon text-4xl mb-4'></i>
+                        <h3 class="text-2xl font-bold mb-2">Visualization & Dashboarding</h3>
+                        <p class="text-gray-600">Tableau, Power BI, Excel, Dash</p>
+                    </div>
+
+                    <!-- Skill Card 5 -->
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class='bx bx-data skills__icon text-4xl mb-4'></i>
+                        <h3 class="text-2xl font-bold mb-2">Data Collection & Management</h3>
+                        <p class="text-gray-600">REDCap, Kobo, ODK</p>
+                    </div>
+
+                    <!-- Skill Card 6 -->
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class='bx bx-server skills__icon text-4xl mb-4'></i>
+                        <h3 class="text-2xl font-bold mb-2">Big Data Technologies</h3>
+                        <p class="text-gray-600">Hadoop, Spark</p>
+                    </div>
+
+                    <!-- Skill Card 7 -->
+                    <div class="skills__card bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class='bx bx-task skills__icon text-4xl mb-4'></i>
+                        <h3 class="text-2xl font-bold mb-2">Project & Workflow Management</h3>
+                        <p class="text-gray-600">Dashboard Development, Version Control, Workflow Optimization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Norbert Onyango</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Header -->
+    <header class="l-header fixed w-full top-0 bg-white shadow-sm z-50">
+        <nav class="nav container mx-auto px-4 h-16 flex justify-between items-center">
+            <a href="index.html" class="nav__logo text-2xl font-bold text-[#47babac2]">Norbert</a>
+            <div class="nav__menu hidden md:flex" id="nav-menu">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="nav__link hover:text-[#C0C0C0]">Home</a></li>
+                    <li><a href="about.html" class="nav__link hover:text-[#C0C0C0]">About</a></li>
+                    <li><a href="skills.html" class="nav__link hover:text-[#C0C0C0]">Skills</a></li>
+                    <li><a href="education.html" class="nav__link hover:text-[#C0C0C0]">Education</a></li>
+                    <li><a href="portfolio.html" class="nav__link hover:text-[#C0C0C0]">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav__link hover:text-[#C0C0C0]">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle md:hidden" id="nav-toggle">
+                <i class='bx bx-menu text-2xl'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="l-main pt-16">
+        <!--===== EDUCATION =====-->
+        <section class="education section py-20" id="education">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-6 text-center">Education</h2>
+
+                <div class="education__container grid md:grid-cols-2 gap-8">
+                    <!-- Education Card 1 -->
+                    <div class="education__card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-2">Bachelor of Economics and Statistics</h3>
+                        <p class="text-gray-600">Second Class Honours</p>
+                        <p class="text-gray-500">The University of Nairobi, Kenya</p>
+                    </div>
+
+                    <!-- Education Card 2 -->
+                    <div class="education__card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-2">High School</h3>
+                        <p class="text-gray-600">KCSE (Grade A)</p>
+                        <p class="text-gray-500">St Joseph’s School Rapogi High School</p>
+                    </div>
+                </div>
+
+                <h2 class="text-4xl font-bold mt-12 mb-6 text-center">Certifications</h2>
+
+                <div class="certifications__container grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Certification Card 1 -->
+                    <div class="certification__card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-2">Advanced Data Analysis</h3>
+                        <p class="text-gray-600">Python, R, SAS (Certified)</p>
+                    </div>
+
+                    <!-- Certification Card 2 -->
+                    <div class="certification__card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-2">Executive Certificate of Proficiency in Insurance</h3>
+                        <p class="text-gray-600">College of Insurance</p>
+                    </div>
+
+                    <!-- Certification Card 3 -->
+                    <div class="certification__card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-2">Business Intelligence</h3>
+                        <p class="text-gray-600">Google-certified</p>
+                    </div>
+
+                    <!-- Certification Card 4 -->
+                    <div class="certification__card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-2">Project Management</h3>
+                        <p class="text-gray-600">Google-certified</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

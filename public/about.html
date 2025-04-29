@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Norbert Onyango</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Header -->
+    <header class="l-header fixed w-full top-0 bg-white shadow-sm z-50">
+        <nav class="nav container mx-auto px-4 h-16 flex justify-between items-center">
+            <a href="index.html" class="nav__logo text-2xl font-bold text-[#47babac2]">Norbert</a>
+            <div class="nav__menu hidden md:flex" id="nav-menu">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="nav__link hover:text-[#C0C0C0]">Home</a></li>
+                    <li><a href="about.html" class="nav__link hover:text-[#C0C0C0]">About</a></li>
+                    <li><a href="skills.html" class="nav__link hover:text-[#C0C0C0]">Skills</a></li>
+                    <li><a href="education.html" class="nav__link hover:text-[#C0C0C0]">Education</a></li>
+                    <li><a href="portfolio.html" class="nav__link hover:text-[#C0C0C0]">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav__link hover:text-[#C0C0C0]">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle md:hidden" id="nav-toggle">
+                <i class='bx bx-menu text-2xl'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="l-main pt-16">
+        <!-- About Section -->
+        <section class="about py-20">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+                <div class="about__img">
+                    <img src="images/profile-img.jpg" alt="Norbert Onyango" class="rounded-full shadow-lg">
+                </div>
+                <div class="about__content">
+                    <h2 class="text-4xl font-bold mb-4">6+ Years of Active Experience</h2>
+                    <blockquote class="italic text-gray-600 border-l-4 border-[#47babac2] pl-4">
+                        "Even the best data products fail if users don't trust, understand, or want them."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

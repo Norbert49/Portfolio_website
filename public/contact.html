@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Norbert Onyango</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Header -->
+    <header class="l-header fixed w-full top-0 bg-white shadow-sm z-50">
+        <nav class="nav container mx-auto px-4 h-16 flex justify-between items-center">
+            <a href="index.html" class="nav__logo text-2xl font-bold text-[#47babac2]">Norbert</a>
+            <div class="nav__menu hidden md:flex" id="nav-menu">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="nav__link hover:text-[#C0C0C0]">Home</a></li>
+                    <li><a href="about.html" class="nav__link hover:text-[#C0C0C0]">About</a></li>
+                    <li><a href="skills.html" class="nav__link hover:text-[#C0C0C0]">Skills</a></li>
+                    <li><a href="education.html" class="nav__link hover:text-[#C0C0C0]">Education</a></li>
+                    <li><a href="portfolio.html" class="nav__link hover:text-[#C0C0C0]">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav__link hover:text-[#C0C0C0]">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle md:hidden" id="nav-toggle">
+                <i class='bx bx-menu text-2xl'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="l-main pt-16">
+        <!--===== CONTACT =====-->
+        <section class="contact section py-20" id="contact">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-6 text-center">Contact</h2>
+
+                <div class="contact__container bd-grid" style="max-width: 600px; margin: 0 auto;">
+                    <!-- Contact Form -->
+                    <form action="https://formspree.io/f/xanoqezj" method="POST" class="contact__form" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <input type="text" name="name" placeholder="Your Name" class="contact__input" required style="padding: 0.75rem; font-size: 1rem; border: 1px solid #ccc;">
+                        <input type="email" name="email" placeholder="Your Email" class="contact__input" required style="padding: 0.75rem; font-size: 1rem; border: 1px solid #ccc;">
+                        <textarea name="message" placeholder="Your Message" class="contact__input" required rows="6" style="padding: 0.75rem; font-size: 1rem; border: 1px solid #ccc;"></textarea>
+
+                        <!-- Hidden Fields -->
+                        <input type="hidden" name="_next" value="https://aesops.co.ke/thank-you.html">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <!-- Submit Button -->
+                        <input type="submit" value="Send Message" class="contact__button button" style="padding: 0.75rem; background-color: #007BFF; color: white; border: none; cursor: pointer;">
+                    </form>
+                </div>
+
+                <!-- WhatsApp Button -->
+                <div style="text-align:center; margin-top:1.5rem;">
+                    <a href="https://wa.me/254703902676" target="_blank" style="padding: 0.75rem 1.5rem; background-color: #25D366; color: white; border-radius: 5px; text-decoration: none;">
+                        Message Me on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
