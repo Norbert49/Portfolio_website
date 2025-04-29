@@ -1,15 +1,18 @@
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId);
+    const toggle = document.getElementById(toggleId);
+    const nav = document.getElementById(navId);
     
-    if(toggle && nav) {
+    if (toggle && nav) {
         toggle.addEventListener('click', () => {
             nav.classList.toggle('show');
         });
+    } else {
+        console.warn(`[main.js] ⚠️ Missing nav toggle (${toggleId}) or menu (${navId}) on this page.`);
     }
 }
 showMenu('nav-toggle', 'nav-menu');
+
 
 /*===== ACTIVE AND REMOVE MENU =====*/
 const navLink = document.querySelectorAll('.nav__link');
@@ -41,7 +44,6 @@ links.forEach(link => {
     link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
         if (href.startsWith('#')) {
-            // Smooth scroll for internal links
             e.preventDefault();
             const targetId = href.substring(1);
             const targetSection = document.getElementById(targetId);
@@ -49,7 +51,6 @@ links.forEach(link => {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         }
-        // For external links (e.g., about.html), allow default navigation
     });
 });
 
@@ -59,25 +60,19 @@ AOS.init({
     once: true,
 });
 
-
-/*SCROLL HOME*/
+/*===== SCROLL REVEAL ANIMATIONS =====*/
 sr.reveal('.home__title', {});
 sr.reveal('.home__social-icon', {delay: 200, interval: 200});
 sr.reveal('.home__img', {delay: 400});
 
-/*SCROLL ABOUT*/
 sr.reveal('.about__img', {});
 sr.reveal('.about__subtitle', {delay: 200});
 sr.reveal('.about__text', {delay: 400});
 
-/*SCROLL SKILLS*/
 sr.reveal('.skills__subtitle', {});
 sr.reveal('.skills__text', {delay: 200});
 sr.reveal('.skills__data', {delay: 400, interval: 200});
 sr.reveal('.skills__img', {delay: 600});
 
-/*SCROLL WORK*/
 sr.reveal('.work__img', {interval: 200});
-
-/*SCROLL CONTACT*/
 sr.reveal('.contact__input', {delay: 200, interval: 200});
