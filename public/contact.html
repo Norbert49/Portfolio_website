@@ -12,25 +12,41 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body class="font-[Poppins] bg-gray-50">
-    <!-- Header -->
-    <header class="l-header fixed w-full top-0 bg-white shadow-sm z-50">
-        <nav class="nav container mx-auto px-4 h-16 flex justify-between items-center">
-            <a href="index.html" class="nav__logo text-2xl font-bold text-[#47babac2]">Norbert</a>
-            <div class="nav__menu hidden md:flex" id="nav-menu">
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="nav__link hover:text-[#C0C0C0]">Home</a></li>
-                    <li><a href="about.html" class="nav__link hover:text-[#C0C0C0]">About</a></li>
-                    <li><a href="skills.html" class="nav__link hover:text-[#C0C0C0]">Skills</a></li>
-                    <li><a href="education.html" class="nav__link hover:text-[#C0C0C0]">Education</a></li>
-                    <li><a href="portfolio.html" class="nav__link hover:text-[#C0C0C0]">Portfolio</a></li>
-                    <li><a href="contact.html" class="nav__link hover:text-[#C0C0C0]">Contact</a></li>
-                </ul>
-            </div>
-            <div class="nav__toggle md:hidden" id="nav-toggle">
-                <i class='bx bx-menu text-2xl'></i>
-            </div>
-        </nav>
-    </header>
+   <!-- Header -->
+<header class="l-header fixed w-full top-0 bg-white shadow-sm z-50">
+    <nav class="container mx-auto px-4 h-16 flex justify-between items-center">
+        <!-- Hamburger Button (Mobile) -->
+        <button id="mobile-toggle" class="md:hidden text-2xl text-[#47babac2]">
+            ☰
+        </button>
+
+        <!-- Logo (Centered on Mobile, Left on Desktop) -->
+        <a href="index.html" class="nav__logo text-2xl font-bold text-[#47babac2] md:ml-0 ml-auto mr-auto md:mr-0">Norbert</a>
+
+        <!-- Desktop Nav -->
+        <div class="nav__menu hidden md:flex" id="nav-menu">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="nav__link hover:text-[#C0C0C0]">Home</a></li>
+                <li><a href="about.html" class="nav__link hover:text-[#C0C0C0]">About</a></li>
+                <li><a href="skills.html" class="nav__link hover:text-[#C0C0C0]">Skills</a></li>
+                <li><a href="education.html" class="nav__link hover:text-[#C0C0C0]">Education</a></li>
+                <li><a href="portfolio.html" class="nav__link hover:text-[#C0C0C0]">Portfolio</a></li>
+                <li><a href="contact.html" class="nav__link hover:text-[#C0C0C0]">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav (Initially hidden) -->
+    <div id="mobile-nav" class="md:hidden hidden flex-col bg-white w-full px-6 py-4 space-y-2 shadow-md">
+        <a href="index.html" class="block text-gray-700 hover:text-[#47babac2]">Home</a>
+        <a href="about.html" class="block text-gray-700 hover:text-[#47babac2]">About</a>
+        <a href="skills.html" class="block text-gray-700 hover:text-[#47babac2]">Skills</a>
+        <a href="education.html" class="block text-gray-700 hover:text-[#47babac2]">Education</a>
+        <a href="portfolio.html" class="block text-gray-700 hover:text-[#47babac2]">Portfolio</a>
+        <a href="contact.html" class="block text-gray-700 hover:text-[#47babac2]">Contact</a>
+    </div>
+</header>
+
 
     <!-- Main Content -->
     <main class="l-main pt-16">
