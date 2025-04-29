@@ -44,11 +44,10 @@
                         <input type="text" name="name" placeholder="Your Name" class="contact__input" required style="padding: 0.75rem; font-size: 1rem; border: 1px solid #ccc;">
                         <input type="email" name="email" placeholder="Your Email" class="contact__input" required style="padding: 0.75rem; font-size: 1rem; border: 1px solid #ccc;">
                         <textarea name="message" placeholder="Your Message" class="contact__input" required rows="6" style="padding: 0.75rem; font-size: 1rem; border: 1px solid #ccc;"></textarea>
-
+                    
                         <!-- Hidden Fields -->
-                        <input type="hidden" name="_next" value="https://aesops.co.ke/thank-you.html">
                         <input type="hidden" name="_captcha" value="false">
-
+                    
                         <!-- Submit Button -->
                         <input type="submit" value="Send Message" class="contact__button button" style="padding: 0.75rem; background-color: #007BFF; color: white; border: none; cursor: pointer;">
                     </form>
@@ -87,5 +86,37 @@
     <!-- JavaScript -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        document.querySelector('.contact__form').addEventListener('submit', async function (e) {
+            e.preventDefault(); // Prevent the default form submission behavior
+    
+            const form = e.target; // Reference to the form element
+            const formData = new FormData(form); // Collect form data
+    
+            try {
+                // Send the form data to Formspree
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+    
+                if (response.ok) {
+                    // Display a success message
+                    form.innerHTML = '<p class="text-green-500 text-center">Thank you! Your message has been sent successfully.</p>';
+                } else {
+                    // Handle errors
+                    form.innerHTML = '<p class="text-red-500 text-center">Oops! Something went wrong. Please try again later.</p>';
+                }
+            } catch (error) {
+                // Handle network errors
+                form.innerHTML = '<p class="text-red-500 text-center">Oops! Something went wrong. Please check your internet connection and try again.</p>';
+            }
+        });
+    </script>
+    
 </body>
 </html>
