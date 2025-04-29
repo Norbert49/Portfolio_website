@@ -1,11 +1,10 @@
 {
-    "rewrites": [
-      { "source": "/index", "destination": "/index.html" },
-      { "source": "/about", "destination": "/about.html" },
-      { "source": "/skills", "destination": "/skills.html" },
-      { "source": "/education", "destination": "/education.html" },
-      { "source": "/portfolio", "destination": "/portfolio.html" },
-      { "source": "/contact", "destination": "/contact.html" }
-    ]
-  }
-  
+  "rewrites": [
+    { "source": "/index", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/skills", "destination": "/skills.html" },
+    { "source": "/education", "destination": "/education.html" },
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/contact", "destination": "/contact.html" }
+  ]
+}
