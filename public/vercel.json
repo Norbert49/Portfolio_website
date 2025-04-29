@@ -1,6 +1,6 @@
 {
   "redirects": [
-    { "source": "/about.html", "destination": "/about", "permanent": true },
+    { "source": "/index.html", "destination": "/about", "permanent": true },
     { "source": "/skills.html", "destination": "/skills", "permanent": true },
     { "source": "/education.html", "destination": "/education", "permanent": true },
     { "source": "/portfolio.html", "destination": "/portfolio", "permanent": true },
