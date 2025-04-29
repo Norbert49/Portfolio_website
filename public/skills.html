@@ -117,35 +117,54 @@
         <p class="footer__copy mt-2">&#169; 2025. All rights reserved</p>
     </footer>
 
-    <!-- JS Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
-
-        // Show Menu
-        const showMenu = (toggleId, navId) => {
-            const toggle = document.getElementById(toggleId),
-                  nav = document.getElementById(navId);
-
-            if (toggle && nav) {
-                toggle.addEventListener('click', () => {
-                    nav.classList.toggle('show');
-                });
-            }
-        };
-        showMenu('nav-toggle', 'nav-menu');
-
-        // Active Link and Hide Mobile Menu
-        const navLink = document.querySelectorAll('.nav__link');
-        function linkAction() {
-            navLink.forEach(n => n.classList.remove('active-link'));
-            this.classList.add('active-link');
-            document.getElementById('nav-menu').classList.remove('show');
-        }
-        navLink.forEach(n => n.addEventListener('click', linkAction));
-    </script>
-</body>
-</html>
+       <!-- JS Scripts -->
+       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       <script>
+           AOS.init({
+               duration: 1000,
+               once: true,
+           });
+   
+           // Show Menu
+           const showMenu = (toggleId, navId) => {
+               const toggle = document.getElementById(toggleId),
+                     nav = document.getElementById(navId);
+   
+               if (toggle && nav) {
+                   toggle.addEventListener('click', () => {
+                       nav.classList.toggle('show');
+                   });
+               }
+           };
+           showMenu('nav-toggle', 'nav-menu');
+   
+           // Active Link and Hide Mobile Menu
+           const navLink = document.querySelectorAll('.nav__link');
+           function linkAction() {
+               navLink.forEach(n => n.classList.remove('active-link'));
+               this.classList.add('active-link');
+               document.getElementById('nav-menu').classList.remove('show');
+           }
+           navLink.forEach(n => n.addEventListener('click', linkAction));
+   
+           // Orientation Detection Script
+           function handleOrientation() {
+               if (window.innerHeight > window.innerWidth) {
+                   // Portrait
+                   document.body.classList.add('portrait');
+                   document.body.classList.remove('landscape');
+               } else {
+                   // Landscape
+                   document.body.classList.add('landscape');
+                   document.body.classList.remove('portrait');
+               }
+           }
+   
+           // Run on load
+           window.addEventListener('load', handleOrientation);
+           // Run on resize/orientation change
+           window.addEventListener('resize', handleOrientation);
+       </script>
+   </body>
+   </html>
+   

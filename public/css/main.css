@@ -34,6 +34,53 @@
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+/* Default responsive fallback */
+body.portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+body.portrait .section {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Adjust font size, image sizes, layout for portrait view */
+body.portrait .hero__title,
+body.portrait .section__title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+body.portrait .hero__subtitle {
+  font-size: 1rem;
+  text-align: center;
+}
+
+body.portrait .skills__container,
+body.portrait .services__container {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Adjust navbar and padding */
+body.portrait .nav__menu {
+  width: 100%;
+  text-align: center;
+}
+
+/* Optional: reduce animation or spacing for portrait view */
+body.portrait [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+
 /* Portfolio Items */
 
 .work__img {

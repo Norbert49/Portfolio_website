@@ -267,3 +267,86 @@ button, input, textarea {
   font-size: 0.8rem;
   opacity: 0.7;
 }
+
+/* Styles for Portrait Mode */
+@media (orientation: portrait) {
+  body {
+      background-color: lightblue; /* Example: Change background in portrait */
+  }
+  .skills__container {
+      grid-template-columns: 1fr; /* Stack skills cards vertically in portrait */
+  }
+}
+
+/* Styles for Landscape Mode */
+@media (orientation: landscape) {
+  body {
+      background-color: lightgreen; /* Example: Change background in landscape */
+  }
+  .skills__container {
+      grid-template-columns: repeat(3, 1fr); /* Show 3 skills cards in a row in landscape */
+  }
+}
+
+/* Example for small screens */
+@media (max-width: 768px) {
+  .nav__menu {
+      display: none; /* Hide menu on small screens */
+  }
+}
+
+/* Hamburger Button */
+.mobile-nav-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+  color: white;
+}
+
+/* Mobile Nav Menu */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 60%;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav ul li {
+  margin: 1rem 0;
+}
+
+.mobile-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* Show when active */
+.mobile-nav.active {
+  left: 0;
+}
+
+/* Responsive visibility */
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+      display: block;
+  }
+}
+
