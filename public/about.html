@@ -15,14 +15,17 @@
 <body class="font-[Poppins] bg-gray-50">
     <!-- Header -->
 <header class="l-header fixed w-full top-0 bg-white shadow-sm z-50">
-    <nav class="container mx-auto px-4 h-16 flex justify-between items-center">
-        <!-- Hamburger Button (Mobile) -->
-        <button id="mobile-toggle" class="md:hidden text-2xl text-[#47babac2]">
-            ☰
-        </button>
+    <nav class="container mx-auto px-4 h-16 flex items-center justify-between md:justify-between">
+        <!-- Hamburger + Logo Wrapper (Mobile View) -->
+        <div class="flex items-center w-full md:w-auto">
+            <!-- Hamburger Button (Mobile) -->
+            <button id="mobile-toggle" class="md:hidden text-2xl text-[#47babac2] mr-4">
+                ☰
+            </button>
 
-        <!-- Logo (Centered on Mobile, Left on Desktop) -->
-        <a href="index.html" class="nav__logo text-2xl font-bold text-[#47babac2] md:ml-0 ml-auto mr-auto md:mr-0">Norbert</a>
+            <!-- Logo (Left on Mobile, Centered via auto margins on Desktop) -->
+            <a href="index.html" class="nav__logo text-2xl font-bold text-[#47babac2] mx-auto md:mx-0">Norbert</a>
+        </div>
 
         <!-- Desktop Nav -->
         <div class="nav__menu hidden md:flex" id="nav-menu">
